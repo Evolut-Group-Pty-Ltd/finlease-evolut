@@ -1,0 +1,234 @@
+.navbar {
+    background: $white;
+    @include below-desktop {
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 1310px;
+    }
+    @include below-desktop {
+        .navbar-brand {
+            display: none;
+        }
+    }
+    .navbar-nav {
+         li {
+             
+             @include above-desktop-above {
+                margin-right: 22px;
+             }
+             a {
+                 font-size: 18px;
+                 padding-left: 0 !important;
+                 outline: none;
+                 @include below-desktop {
+                   padding-left: 1rem !important;
+                   padding-right: 1rem !important;
+                 }
+                 &:hover {
+                     font-weight: 700;
+                     color: $slate-grey !important;
+                 }
+                 &.dropdown-toggle {
+                     position: relative;
+                     &:after {
+                         @include below-desktop {
+                         position: absolute;
+                         right: 20px;
+                         height: 10px;
+                         width: 10px;
+                         border-bottom: 2px solid $slate-grey;
+                         border-right: 2px solid $slate-grey;
+                         border-top: none;
+                         border-radius: 0;
+                         border-left: none;
+                         -webkit-transform: rotate(45deg);
+                         transform: rotate(45deg);
+                         top: 13px;
+                         transition: all 0.5s;
+                         }
+                     }
+                     
+                     &.open {
+                         @include below-desktop {
+                            background: #f3f4f4;
+                         }
+                        
+                         &:after {
+                             @include below-desktop {
+                             -webkit-transform: rotate(-135deg);
+                             transform: rotate(-135deg);
+                             top: 18px;
+                             }
+                         }
+                     }
+                 }
+                
+             }
+              &.current-menu-item {
+                  a > {
+                      font-weight: 700;
+                    color: $slate-grey !important;
+                  }
+              }
+              &.current-menu-ancestor {
+                  > a {
+                      font-weight: 700;
+                      color: $slate-grey !important;
+                  }
+              }
+         }
+    }
+    
+}
+
+.menu-secondary-menu-container {
+    width: 100%;
+     @include below-desktop {
+         height: calc(100vh - 70px);
+         align-items: flex-start;
+         overflow-y: auto;
+     }
+}
+// mega menu css
+.mega-dropdown {
+    position: static;
+    .mega-dropdown-menu {
+        width: 100%;
+        padding: 50px 0;
+        min-height: 380px;
+        @include below-desktop {
+            padding: 1px 0;
+            min-height: 1px;
+            background: #f3f4f4;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+        }
+        ul {
+            max-width: 1125px;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            position: relative;
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .mega-dropdown-items {
+                float: left;
+                width: 25%;
+                list-style: none; 
+                margin-top: 26px;
+                position: static;
+                &.dropdown-submenu {
+                    min-height: 1px;
+                }
+                &:last-child {
+                    @include above-desktop-above {
+                        margin-top: -100px;
+                    }
+                    
+                }
+                @media (max-width:991px) {
+                    float: none;
+                    width: 100%;
+                    margin-right: 0;
+                }
+                h3 {
+                    font-size: 18px;
+                    color: $silver-chalice;
+                    font-weight: 700;
+                     margin-bottom: 25px;
+                     
+                }
+                .mega-dropdown-lists {
+                    margin: 20px 0;
+                    position: static;
+                    li {
+                        margin-bottom: 20px;
+                        list-style: none;
+                        width: 100%;
+                        margin: 0;
+                        &.current-menu-item {
+                            a {
+                                font-weight: 700;
+                            }
+                        }
+                        .product-detail {
+                            position: absolute;
+                            right: 0;
+                            max-width: 260px;
+                            top: 0;
+                            display: none;
+                            @media (max-width:991px) {
+                                display: none !important;
+                            }
+                            .product-image {
+                                margin-bottom: 20px;
+                            }
+                            .product-content {
+                                font-size: 18px;
+                                color: $slate-grey;
+                                p {
+                                    margin: 0;
+                                    font-size: 18px;
+                                    color: $slate-grey;
+                                }
+                            }
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        a {
+                            color: $slate-grey;
+                            font-size: 18px;
+                            &:hover {
+                                color: $red-dust;
+                                text-decoration: none;
+                            }
+                            
+                        }
+                    }
+                }
+                &.active h3 {
+                    color: $red-dust;
+                    a {
+                        color: $red-dust;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown-submenu {
+    position: relative;
+    .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+}
+
+.navbar-toggler {
+    /*
+    @media (min-width:992px) {
+        display: none;
+    }
+    */
+    padding: 0;
+    margin-top: 5px;
+    .toggle-icon {
+        height: 2px;
+        width: 25px;
+        display: block;
+        background: $slate-grey;
+        margin: 5px 0;
+    }
+    &:focus {
+        outline: none;
+    }
+}

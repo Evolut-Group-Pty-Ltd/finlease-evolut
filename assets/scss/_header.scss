@@ -1,0 +1,134 @@
+.header-wrapper {
+    &.scroll-to-fixed-fixed {
+        box-shadow: 0 0 3px rgba($black, 0.2);
+    }
+}
+.header {
+    background: $white;
+    .container {
+        max-width: 1160px;
+    }
+}
+
+.inner-header-wrapper {
+    border-bottom: 1px solid #DBDEE0;
+    padding: 15px 0;
+    .header-logo {
+        text-align: center;
+    }
+    [class*=col-] {
+        max-width: 33.33%;
+        flex: 0 0 33.33%;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            a {
+                color: $slate-grey;
+                font-size: 18px;
+                text-decoration: none;
+                &:hover {
+                    font-weight: 700;
+                     color: $slate-grey;
+                }
+                &.btn--outline--red--dust {
+                    min-width: 145px;
+                     @media (max-width:360px) {
+                         min-width: 1px;
+                         font-size: 12px;
+                         white-space: nowrap;
+                     }
+
+                     @media (min-width:361px) and (max-width:767px) {
+                         min-width: 1px;
+                         font-size: 14px;
+                         white-space: nowrap;
+                     }
+                }
+               
+            }
+            &.current-menu-item {
+                a {
+                    font-weight: 700;
+                     color: $slate-grey;
+                }
+            }
+        }
+    }
+    
+
+    .header-right-menu {
+        text-align: right;
+        li {
+            margin-top: 8px;
+            margin-right: 25px;
+            @include below-desktop {
+                &:first-child {
+                    display: none;
+                }
+                margin-top: 0;
+            }
+            @include tablet {
+                margin-right: 5px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                img {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+.header-menu {
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            margin-right: 40px;
+            margin-top: 8px;
+             &:last-child {
+                 margin-right: 0;
+             }
+             @include below-desktop {
+                margin: 0;
+             }
+
+            a {
+                color: $slate-grey;
+                font-size: 18px;
+                text-decoration: none;
+                @include below-desktop {
+                   display: block;
+                   padding: 8px 1rem;
+                }
+
+                &:hover {
+                    font-weight: 700;
+                    color: $slate-grey;
+                }
+
+                &.btn--outline--red--dust {
+                    min-width: 145px;
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    font-weight: 700;
+                    color: $slate-grey;
+                }
+            }
+        }
+    }
+
+}

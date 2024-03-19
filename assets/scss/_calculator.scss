@@ -1,0 +1,344 @@
+.loan-calculator-text {
+    padding: 56px 5px;
+    .loan__calculator__wrapper {
+        max-width: 650px;
+        h2 {
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}
+// service-icon-block--light--slate--grey
+.service-icon-block--light--slate--grey {
+    background: $Light-Slate-Grey;
+    .title-block {
+        margin-bottom: 50px;
+    }
+}
+// help--slate--grey
+.help--slate--grey {
+    padding-top: 64px;
+   
+    .row {
+        @include above-desktop-above {
+            .help__content__block {
+                padding-right: 48px;
+            }
+        }
+        &:nth-child(odd) {
+            @include above-desktop-above {
+                .help__content__block {
+                    padding-left: 48px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .help__content__block {
+        max-width: 100%;
+        margin-left: 0;
+        h3 {
+            color: $white;
+        }
+        p{
+            color: $white;
+        }
+    }
+}
+
+// calculator section
+.finlease--calculator--tab {
+    .nav-tabs {
+        .nav-item {
+            .nav-link {
+                text-transform: capitalize;
+                padding: 14px 20px;
+                @include mobile {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    // end tabs css
+   
+}
+
+ .calculator-values {
+     h3 {
+         font-size: 24px;
+         line-height: 2rem;
+         margin-bottom: 20px;
+     }
+ }
+
+ .calculator__output {
+     background: $white;
+     padding: 24px 40px;
+     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+     @include border-radius(4px);
+     @include mobile {
+         padding: 24px;
+     }
+     @include below-desktop {
+         max-width: 580px;
+         margin: 0 auto;
+         width: 90%;
+     }
+     .calc__value {
+         border-bottom: 1px solid $gainsboro;
+         margin-bottom: 25px;
+         padding-bottom: 20px;
+         label {
+            @include mobile {
+                // -ms-flex: 0 0 58.333333%;
+                // flex: 0 0 58.333333%;
+                // max-width: 58.333333%;
+            }
+         }
+         div {
+             &.col-sm-5 {
+                 @include mobile {
+                    //  -ms-flex: 0 0 41.666667%;
+                    //  flex: 0 0 41.666667%;
+                    //  max-width: 41.666667%;
+                 }
+             }
+         }
+     }
+     h3 {
+         font-size: 24px;
+         border-bottom: 1px solid $gainsboro;
+         padding-bottom: 20px;
+         margin-bottom: 30px;
+     }
+     .form-control {
+         text-align: right;
+         border: none;
+         border-radius: 0;
+         box-shadow: none;
+         outline: none;
+         font-weight: 700;
+         pointer-events: none;
+         background: none !important;
+         @include mobile {
+            text-align: left;
+            padding-left: 0;
+         }
+     }
+
+     .calculated-value {
+         margin-bottom: 30px;
+         margin-top: 1rem;
+         h2 {
+             font-weight: 900;
+         }
+         .wpcf7-form-control {
+             width: 100%;
+             border: none;
+             padding: 0;
+             font-weight: inherit;
+             color: $slate-grey;
+             pointer-events: none;
+         }
+         
+     }
+     .btn--big {
+         max-width: 100%;
+     }
+ }
+
+ .fl-quote-email {
+     margin-block-end: 1rem;
+     .wpcf7-form-control {
+         height: 64px;
+         border-radius: 0;
+         background: $white;
+         border: 1px solid rgba(142, 155, 163, 0.2);
+         padding: 15px 25px;
+         width: 100%;
+         &.wpcf7-not-valid {
+             border: 1px solid $red-dust;
+         }
+     }
+ }
+.range-output {
+    margin-bottom: 30px;
+    min-height: 75px;
+    @include below-desktop {
+        max-width: 580px;
+        margin: 0 auto 30px;
+        width: 90%;
+    }
+     .form-control {
+         height: 48px !important;
+         border: none;
+         border-radius: 0;
+         max-width: 148px;
+         margin-left: auto;
+         margin-bottom: 22px;
+         box-shadow: none;
+     }
+}
+
+.finlease--calculator--tab .finlease__tab__wrapper {
+    padding: 50px 0 60px 0;
+    @include below-desktop {
+        padding-bottom: 0;
+    }
+}
+.custom-control {
+    // padding-left: 0;
+    .custom-control-label {
+        position: relative;
+        cursor: pointer;
+        padding-left: 6px;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -1.5rem;
+            display: block;
+            width: 21px;
+            height: 21px;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: $white;
+            @include border-radius(0);
+        }
+    }
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: $red-dust;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background: none;
+    height: 6px;
+    width: 11px;
+    border-left: 2px solid $white;
+    border-bottom: 2px solid $white;
+    content: "";
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 6px;
+    left: -19px;
+}
+
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: none;
+}
+
+
+
+//  ui range slider css
+.ui-widget.ui-widget-content {
+    background: $white;
+    @include mobile {
+        margin-right: 10px;
+    }
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.5em;
+}
+
+.ui-slider .ui-slider-handle {
+    cursor: move;
+    -ms-touch-action: auto;
+    touch-action: auto;
+}
+
+.ui-slider-horizontal {
+    height: 5px;
+    border: none !important;
+}
+
+.ui-widget-header {
+    background: $red-dust;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+.ui-button.ui-state-disabled:hover,
+ .ui-button.ui-state-disabled:active,
+ .ui-state-hover,
+ .ui-widget-content .ui-state-hover,
+ .ui-widget-header .ui-state-hover,
+ .ui-state-focus,
+ .ui-widget-content .ui-state-focus,
+ .ui-widget-header .ui-state-focus,
+ .ui-button:hover,
+ .ui-button:focus {
+    border: 1px solid $red-dust;
+    background: $red-dust;
+    font-weight: normal;
+    color: $red-dust;
+    border-radius: 50% !important;
+}
+
+.dynamictext-msg textarea {
+    border-radius: 0;
+    background: $white;
+    border: 1px solid rgba(142, 155, 163, 0.2);
+    padding: 15px 25px;
+    width: 100%;
+    height: 120px;
+}
+@media (min-width:768px) {
+    .tabwrapper-carousel {
+        display: flex;
+    }
+}
+
+.tabwrapper-carousel {
+    .owl-nav {
+        margin: 0;
+        button {
+            background: none !important;
+            outline: none;
+            position: absolute;
+            bottom: 50%;
+            transform: translateY(50%);
+            margin: 0 !important;
+
+            &:after {
+                content: "";
+                height: 12px;
+                width: 12px;
+                border-left: 2px solid $jet;
+                border-bottom: 2px solid $jet;
+                display: block;
+            }
+
+            &.owl-next {
+                right: 10px;
+
+                &:after {
+                    transform: rotate(-135deg);
+                }
+            }
+
+            &.owl-prev {
+                left: 10px;
+
+                &:after {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+
+.tabwrapper-carousel .owl-nav button span {
+    display: none;
+}
+

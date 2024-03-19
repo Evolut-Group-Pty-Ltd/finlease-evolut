@@ -1,0 +1,149 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$finlease: #A2A569;
+$white: #ffffff;
+$slate-grey: #7C878E;
+$black: #000;
+$Light-Slate-Grey: #F3F4F4;
+$pale-silver: #C8C6AF;
+$red-dust: #de6b48;
+$rainish-black: #222427;
+$jet: #2E3234;
+$manatee: #949CA1;
+$silver-chalice: #ACB2B7;
+$gainsboro: #DBDEE0;
+
+// responsive breakpoints
+$mobile-width: 767px;
+$tablet-width: 768px;
+$desktop-below-width: 991px;
+$desktop-above-width: 992px;
+$desktop-width: 1024px;
+
+
+body {
+    background: $Light-Slate-Grey;
+    font-family: 'Gotham';
+    font-weight: 400;
+    color: $slate-grey;
+    font-size: 16px;
+}
+img {
+    max-width: 100%;
+    height: 100%;
+}
+.Light--Slate--Grey {
+    background: $Light-Slate-Grey;
+}
+
+.help--slate--grey {
+    background: $slate-grey;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $slate-grey;
+}
+
+.container {
+    max-width: 1160px;
+}
+
+.h2,
+h2 {
+    color: $slate-grey;
+    font-size: 36px;
+    font-weight: 700;
+    @media (max-width: 767px) {
+        font-size: 32px;
+  
+    }
+}
+.h3,
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+.btn {
+    border-radius: 2px;
+    white-space: normal;
+    position: relative;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.btn--red--dust {
+    background: $red-dust;
+    color: $white !important;
+    &:after {
+        background: $finlease;
+        content: "";
+        // position: absolute;
+        // height: 100%;
+        // width: 100%;
+        // left: 0;
+        // top: 0;
+    }
+}
+.btn--transparent {
+    background-color: transparent;
+}
+.btn--outline--red--dust {
+    color: $red-dust !important;
+    font-weight: 700;
+    border: 1px solid $red-dust;
+}
+.btn--green {
+    background: $finlease;
+    color: $white !important;
+}
+.gray--bg {
+    background: #C4C8CB;
+}
+.btn--big {
+    max-width: 320px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 18px 10px;
+}
+.btn--red--outline {
+    background: transparent;
+    border: 1px solid $red-dust;
+    color: $red-dust !important;
+}
+.btn--gray--outline {
+    background: transparent;
+    border: 1px solid $slate-grey;
+    color: $slate-grey !important;
+}
+.white--bg {
+    background: $white;
+}
+.testimonial--gray {
+   background: $gainsboro;
+}
+
+.btn--radius--30 {
+    border-radius: 30px;
+}
+.section-padding {
+    padding-top: 180px;
+    @media (max-width: 767px) {
+         padding-top: 50px;
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+        padding-top: 70px;
+    }
+}
+
+// all button class=btn for big button class big-btn for big button with outline red border=class btn--big btn--big--red--outline for big button with outline gray border=class btn--big btn--big--gray--outline for big button with red color=class btn--red--dust for small button with outline red border=class btn--sm btn--sm--red--outline for small button with outline gray border=class btn--sm btn--sm--gray--outline header button=btn btn--outline btn--outline--red--dust
+
+
+

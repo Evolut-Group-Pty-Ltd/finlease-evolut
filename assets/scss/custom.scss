@@ -1,0 +1,43 @@
+@import "fonts";
+@import "global";
+@import "owl.carousel";
+@import "owl.theme";
+@import "mixins";
+@import "header";
+@import "navbar";
+@import "banner";
+@import "bannermenu";
+@import "main";
+@import "footer";
+@import "services";
+@import "nav-tab";
+@import "applicationform";
+@import "calculator";
+@import "blog";
+@import "brendelle_mess";
+@import "landing";
+.owl-carousel .owl-stage,
+.owl-carousel.owl-drag .owl-item {
+    -ms-touch-action: auto;
+    touch-action: auto;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+[data-class="wpcf7cf_group"]:first-of-type {
+	display: block;
+}
+
+@media screen and (max-width: 767px) {
+	.nav-tabs {
+		display: block;
+		height: 55px;
+		overflow: hidden;
+	}
+}

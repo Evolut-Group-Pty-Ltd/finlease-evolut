@@ -1,0 +1,562 @@
+.page-template-template-landing-broker,
+.page-template-template-landing,
+.page-template-template-landing-thank-you {
+  .header {
+    .header-logo {
+      text-align: left;
+    }
+
+    .header-right-menu {
+      li {
+        margin-top: 0;
+
+        .btn {
+          width: 256px;
+          padding: 8px;
+        }
+      }
+    }
+  }
+
+  .inner-header-wrapper {
+    .col-lg-8 {
+      max-width: 66.6667%;
+      flex: 0 0 66.6667%;
+    }
+  }
+
+  #reviews {
+    display: block;
+  }
+}
+
+.landing-page {
+  .intro {
+    min-height: 80vh;
+    padding: 96px 0;
+    color: white;
+    background: url('../images/background-plus.png') bottom right no-repeat;
+
+    &.intro--light {
+      color: white;
+    }
+
+    &.intro--dark {
+      color: $slate-grey;
+
+      ul li:before {
+        background-image: url('../images/list-tick-dark.svg');
+      }
+    }
+
+    .title {
+      font-size: 55px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .title,
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        display: flex;
+        font-size: 14px;
+        margin-bottom: 10px;
+
+        &:before {
+          content: '';
+          background-image: url('../images/list-tick.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 18px;
+          width: 18px;
+          height: 18px;
+          margin-right: 10px;
+          flex: 0 0 auto;
+        }
+      }
+    }
+
+    .mini-form {
+      max-width: 452px;
+      width: 100%;
+      float: right;
+      color: #17191a;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .heading {
+        padding: 24px 32px 20px;
+        color: white;
+        background: $finlease;
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .pages {
+        position: relative;
+        padding: 30px 0 0;
+        width: 200%;
+        overflow: hidden;
+        background: white;
+        left: 0;
+        transition: .3s all ease-in-out;
+
+        .page {
+          padding: 0 30px;
+          float: left;
+          width: 50%;
+
+          .form-group {
+            > label {
+              color: #17191a;
+              font-weight: 700;
+              margin-bottom: 5px;
+            }
+
+            select,
+            input,
+            textarea {
+              border-color: #17191a;
+              padding: 11px 15px;
+              font-size: 14px;
+              border-radius: 2px;
+              height: auto;
+            }
+
+            textarea {
+              height: 100px;
+            }
+
+            .wpcf7-not-valid-tip {
+              font-size: 14px;
+            }
+
+            ::-webkit-input-placeholder {
+              color: #abacac;
+            }
+
+            :-ms-input-placeholder {
+              color: #abacac;
+            }
+
+            ::placeholder {
+              color: #abacac;
+            }
+          }
+
+          .btn {
+            max-width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+          }
+        }
+
+        &.moved {
+          left: -100%;
+        }
+      }
+
+      .wpcf7-response-output {
+        padding: 10px !important;
+        margin: 20px 30px !important;
+        float: right;
+        width: calc(50% - 60px);
+        font-size: 13px;
+        text-align: center;
+        line-height: 1.2em;
+
+        &.wpcf7-validation-errors {
+          border: 2px solid #de6b48;
+        }
+      }
+
+      .form-pagination {
+        padding: 15px 0;
+        text-align: center;
+        background: white;
+
+        .dot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #de6b48;
+          opacity: .5;
+          margin: 0 2px;
+          cursor: pointer;
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .numerical-section {
+    padding: 34px 0;
+    min-height: 0;
+  }
+
+  .calculator__output {
+    padding: 30px 40px 40px;
+
+    .fl-quote-email {
+      padding-right: 130px;
+
+      input {
+        height: 48px;
+        padding-left: 15px;
+        font-size: 14px;
+      }
+    }
+
+    .wpcf7-submit.btn--gray--outline {
+      position: absolute;
+      margin-top: -64px;
+      width: 120px;
+      right: 50px;
+      font-size: 16px;
+      padding: 5px;
+      height: 48px;
+      color: white !important;
+      background-color: $finlease;
+      border: 0;
+    }
+
+    .wpcf7-submit.btn--red--dust {
+      padding: 10px;
+    }
+  }
+
+  .product-review-section {
+    background: $slate-grey;
+    padding: 100px 0;
+    text-align: center;
+
+    .over-title {
+      color: white;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .title {
+      color: white;
+    }
+
+    .productreviewwidget {
+      padding: 50px 0 0;
+    }
+
+    .css-1adcux5 {
+      display: none !important;
+    }
+
+    .css-1du9rlh {
+      .owl-stage-outer {
+        overflow: hidden;
+
+        .owl-item {
+          display: inline-block;
+          vertical-align: top;
+          padding: 0 10px;
+        }
+      }
+
+      .owl-nav {
+        margin-top: 30px;
+
+        .owl-prev,
+        .owl-next {
+          width: 40px;
+          height: 40px;
+          background-color: transparent;
+          background-position: center;
+          background-size: 40px;
+          border: 0;
+          font-size: 0;
+          color: transparent;
+          margin: 0 10px;
+          outline: none;
+          cursor: pointer;
+
+          &.disabled {
+            opacity: .5;
+          }
+        }
+
+        .owl-prev {
+          background-image: url(../images/reviews-arrow.png);
+          transform: rotateZ(180deg);
+        }
+
+        .owl-next {
+          background-image: url(../images/reviews-arrow.png);
+        }
+      }
+
+      .css-fapaes {
+        > a {
+          position: relative;
+          background: white;
+          border-radius: 5px;
+          padding: 30px 30px 60px;
+          border-bottom: 8px solid $finlease;
+          height: 360px;
+
+          .css-11ka5pk {
+            position: relative;
+            width: 150px !important;
+            margin: 10px auto !important;
+
+            .css-1sgxfl5,
+            .css-1n19a62 {
+              background-repeat: no-repeat;
+              background-position: left center;
+              background-size: 150px !important;
+              height: 30px !important;
+            }
+
+            .css-1n19a62 {
+              display: block;
+              background-image: url(../images/review-stars-grey.png) !important;
+            }
+
+            .css-1sgxfl5 {
+              background-image: url(../images/review-stars.png) !important;
+              position: absolute;
+              top: 0;
+              z-index: 1;
+            }
+          }
+
+          .css-1jc7p9 {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 700;
+            color: #17191a;
+            text-align: center;
+          }
+
+          .css-1k403vq {
+            color: #17191a !important;
+          }
+        }
+      }
+    }
+  }
+
+  .get-quote {
+    .contactform__left {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .contactform__form {
+      max-width: 550px;
+      margin: 40px auto 20px;
+
+      .form-group {
+        > label {
+          font-weight: 700;
+          margin-bottom: 5px;
+          color: #17191a;
+        }
+
+        .form-control {
+          height: 48px;
+          padding: 10px 20px;
+          font-size: 14px;
+          border-color: #17191a;
+          border-radius: 2px;
+        }
+
+        textarea.form-control {
+          height: 135px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .btn--big {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.landing-page-thanks {
+  .intro {
+    padding: 120px 0;
+    text-align: center;
+    max-width: 775px;
+    margin: 0 auto;
+
+    .text {
+      margin-bottom: 40px;
+
+      h1 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .numerical-section {
+    padding: 34px 0;
+    min-height: 0;
+  }
+}
+
+.page-template-template-landing-broker {
+  .intro {
+    color: $slate-grey;
+
+    .title {
+      color: $black;
+
+      span {
+        color: $red-dust;
+      }
+    }
+
+    ul {
+      li {
+        &:before {
+          background-image: url(../images/list-tick-orange.svg);
+        }
+      }
+    }
+
+    .r-col {
+      background: white;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      .bottom {
+        padding: 20px;
+      }
+
+      .row {
+        margin-left: -5px;
+        margin-right: -5px;
+
+        .col-12 {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  .footer-cta {
+    font-size: 20px;
+    padding: 100px 0;
+
+    p {
+      margin: 20px 0 30px;
+    }
+
+    a {
+      color: $slate-grey;
+    }
+
+    .row {
+      margin-left: -10px;
+      margin-right: -10px;
+
+      .col-12 {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@include below-desktop {
+  .landing-page {
+    .intro {
+      padding: 60px 0;
+
+      .title {
+        font-size: 36px;
+      }
+
+      .mini-form {
+        margin-top: 30px;
+        max-width: none;
+      }
+    }
+
+    .calculator__output {
+      .fl-quote-email {
+        padding-right: 0;
+      }
+
+      .wpcf7-submit.btn--gray--outline {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        right: auto;
+      }
+    }
+  }
+
+  .landing-page-thanks {
+    .intro {
+      padding: 60px 0;
+    }
+  }
+}
+
+@include mobile {
+  .page-template-template-landing-broker,
+  .page-template-template-landing,
+  .page-template-template-landing-thank-you {
+    .header .header-right-menu li .btn {
+      width: auto;
+    }
+
+    .intro {
+      .r-col {
+        .btn {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .footer-cta {
+      .btn {
+        margin-bottom: 10px;
+      }
+
+      .row {
+        .col-12 {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}

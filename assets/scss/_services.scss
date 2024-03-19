@@ -1,0 +1,44 @@
+.service-icon-block {
+    background: $white;
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    min-height: 322px;
+    @include desktop {
+        .title-block {
+            margin-bottom: 60px;
+        }
+    }
+    .row {
+        justify-content: center;
+        @include desktop {
+            -ms-flex-wrap: inherit;
+            flex-wrap: inherit;
+        }
+        
+        [class*="col-"] {
+            @include desktop {
+            -ms-flex: auto;
+            flex: auto;
+            max-width: 100%;
+            }
+            
+        }
+    }
+    .service__wrapper {
+        text-align: center;
+        @include below-desktop {
+            margin: 40px 0;
+        }
+        .service__icon {
+            margin-bottom: 20px;
+            min-height: 84px;
+        }
+        .service__info {
+            p {
+                margin: 0;
+                font-size: 20px;
+            }
+        }
+    }
+}

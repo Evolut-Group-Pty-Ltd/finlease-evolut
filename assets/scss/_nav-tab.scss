@@ -1,0 +1,172 @@
+
+.nav-tabs  {
+    border-bottom: none;
+    .nav-item {
+        margin-bottom: 0;
+        .nav-link {
+            border: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            padding: 14px;
+            font-size: 18px;
+            color: $slate-grey;
+            text-transform: uppercase;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            &.active {
+                color: $red-dust;
+                background-color: $gainsboro;
+                border: none;
+                font-weight: 700;
+                @include mobile {
+                    background-color: $white;
+                }
+            }
+
+            &:hover {
+                color: $red-dust;
+                background-color: $gainsboro;
+                border: none;
+                font-weight: 700;
+                @include mobile {
+                    background-color: $white;
+                }
+            }
+            &::after {
+                content: attr(data-text);
+                content: attr(data-text) / "";
+                height: 0;
+                visibility: hidden;
+                overflow: hidden;
+                user-select: none;
+                pointer-events: none;
+                font-weight: bold;
+
+                @media speech {
+                    display: none;
+                }
+            }
+        }
+    } 
+}
+
+.finlease__tab__wrapper {
+    background: $gainsboro;
+    padding: 38px 0;
+    .finlease__tab__items {
+        margin:  20px 0;
+        position: relative;
+        .tab-overlay {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            background: rgba($slate-grey, 0.8);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            a {
+                visibility: hidden;
+            }
+        }
+        .finlease__tab__image {
+            min-height: 1px;
+            img {
+                width: 100%;
+            }
+        }
+        .finlease__tab__grid__info {
+            background: $white;
+            padding: 24px;
+            h4 {
+                font-size: 16px;
+                font-weight: 700;
+                 text-transform: capitalize;
+                 margin-block-end: 13px;
+            }
+            p {
+                position: relative;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .finlease--tab--icon {
+            p {
+                padding-left: 40px;
+                img {
+                    position: absolute;
+                    left: 0;
+                }
+                a {
+                    color: $slate-grey;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &:hover {
+            .tab-overlay {
+                opacity: 1;
+                a {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+.tab-content {
+    .row {
+        margin:  0 -12px; 
+        [class*=col-] {
+            padding: 0 12px;
+            @include below-desktop {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+// broker page css
+.brocker-section-detail {
+    h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+.broker-category-section {
+    padding-bottom: 80px;
+    margin-bottom: 55px;
+    @include mobile {
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $slate-grey;
+    }
+}
+
+.brocker--tab {
+    .finlease__tab__wrapper {
+        padding-top: 55px;
+        @include mobile {
+            padding-bottom: 1px;
+        }
+    }
+}

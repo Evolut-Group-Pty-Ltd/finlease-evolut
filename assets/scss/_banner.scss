@@ -1,0 +1,214 @@
+.banner  {
+    position: relative;
+    background: $white;
+    @include mobile {
+        padding-bottom: 40px;
+    }
+    @include tablet {
+        padding: 100px 0;
+    }
+    .container {
+        @include above-tablet {
+            position: absolute;
+            bottom: 50%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+            display: flex;
+            justify-content: flex-end;
+        }
+        .banner-caption {
+            max-width: 450px;
+            width: 100%;
+            @include tablet {
+                  max-width: 350px;
+            }
+            // font-size: 24px;
+            // color: $slate-grey;
+            h1 {
+                font-size: 64px;
+                font-weight: 700;
+                margin-block-end: 15px;
+                @media(max-width:767px) {
+                    font-size: 44px;
+                }
+
+                @include tablet {
+                    font-size: 54px;
+                }
+            }
+            > div:not(.banner-dropdown) {
+                 font-size: 24px;
+                 color: $slate-grey;
+                 margin-bottom: 10px;
+            }
+
+            .banner-dropdown {
+                max-width: 270px;
+                width: 100%;
+                @include mobile {
+                     max-width: 100%;
+                }
+                .dropdown-menu {
+                    width: 100%;
+                    border: none;
+                    border-radius: 0;
+                    // box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+                    @include mobile {
+                        padding-left: 0;
+                    }
+                    a {
+                       color: $slate-grey;
+                       background: none;
+                    //    font-size: 14px;
+                       &:hover {
+                           color: $finlease;
+                       }
+                       &.test{
+                           padding: .25rem 1.5rem;
+                           font-size: 14px;
+                           border: none;
+                           display: block;
+                           color: $slate-grey;
+                           font-weight: 400;
+                            text-decoration: none;
+                       }
+                    }
+                }
+                .btn-secondary {
+                    background: none;
+                    color: $finlease;
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: 1px solid currentColor;
+                    font-size: 24px;
+                    font-weight: 700;
+                    padding: 0;
+                    width: 100%;
+                    text-align: left;
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    &:after {
+                        border-top: none;
+                        border-bottom: 0;
+                        border-left: none;
+                        height: 13px;
+                        width: 13px;
+                        border-bottom: 2px solid $finlease;
+                        border-right: 2px solid $finlease;
+                        transform: rotate(45deg);
+                    }
+                    &.main-toggler {
+                        &:after {
+                            top: 27%;
+                        }
+                    }
+                }
+            }
+            .get-started {
+                margin-top: 40px;
+                .btn {
+                    max-width: 320px;
+                    width: 100%;
+                    font-size: 18px;
+                    font-weight: 700;
+                    padding: 18px 10px;
+                }
+            }
+
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.menu-banner-menu-container ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+        &.menu-item-has-children {
+            position: static;
+            &:hover .sub-menu {
+                display: block;
+            }
+            &:after {
+                border-top: none;
+                border-bottom: 0;
+                border-left: none;
+                height: 10px;
+                width: 10px;
+                // border-bottom: 2px solid $finlease;
+                // border-right: 2px solid $finlease;
+                // transform: rotate(45deg);
+                content: "";
+                position: absolute;
+                right: 4px;
+                top: 40%;
+            }
+            > a {
+
+                color: $finlease;
+                border: none;
+                border-bottom: 1px solid currentColor;
+                font-size: 24px;
+                font-weight: 700;
+                padding: 0;
+                display: block;
+                text-decoration: none;
+                outline: none;
+            }
+            .sub-menu {
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+                display: none;
+                position: absolute;
+                width: 100%;
+                background: $white;
+                li.menu-item-has-children {
+                    &:after {
+                        border-top: none;
+                        border-bottom: 0;
+                        border-left: none;
+                        height: 10px;
+                        width: 10px;
+                        border-bottom: 2px solid $finlease;
+                        border-right: 2px solid $finlease;
+                        transform: rotate(-45deg);
+                        content: "";
+                    }
+                }
+                a {
+                    color: $slate-grey;
+                    font-size: 24px;
+                    text-decoration: none;
+                    border: none;
+                    font-weight: 400;
+                    padding: .5rem 1.5rem;
+                }
+                .sub-menu {
+                    display: none;
+                    left: 100%;
+                    top: 0;
+                    a {
+                        color: $slate-grey;
+                        font-size: 24px;
+                        text-decoration: none;
+                        border: none;
+                        font-weight: 400;
+                        padding: .5rem 1.5rem;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .sub-menu li:hover .sub-menu {
+            display: block;
+            
+        }
+    }
+}
