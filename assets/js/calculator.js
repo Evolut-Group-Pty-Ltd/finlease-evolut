@@ -1,4 +1,5 @@
 jQuery(function($) {
+    console.log("Calculator initiailized");
     "use strict";
 
     function init_sliders(id) {
